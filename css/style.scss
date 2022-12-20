@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/*SETTING
+-----------------------------------*/
+
+$color-main: #32353C;
+$color-accent: #B79B6C;
+$color-back: #F4F4F4;
+$color-white: #FFFFFF;
+
+@mixin mp-pc() {
+    @media(min-width:800px) {
+        @content;
+    }
+}
+
+@mixin inner($w: 800px) {
+    max-width: $w + px;
+    width: (800/900)*100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin py($p: 84) {
+    padding-top: ($p/14)+em;
+    padding-bottom: ($p/14)+em;
+}
+
+@function rem($value) {
+    @return ($value/14)+rem;
+}
+
+/*BASE
+-----------------------------------*/
+html {
+    font-size: (14/16)*100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/*------index------*/
+/*visual*/
+.visual {
+    //clamp(最小値,最小値と最大値の間,最大値)
+    //間の値は、ウィンドウの横幅がどのサイズのときに、最小値にしたいかで計算する。
+    //今回はブレイクポイントが800pxで、最小値が600pxなので、(600/800)*100で計算。
+    height: clamp(600px, 75vw, 800px);
+    background-image: url("../images/bg_home.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+/*goods*/
+.goods {
+    &__recommend {
+        @include py();
+    }
+
+    &__inner {
+        @include inner();
+    }
+}
