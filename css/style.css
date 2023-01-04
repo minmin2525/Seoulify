@@ -5,11 +5,55 @@
 html {
   font-size: 87.5%;
 }
+@media (min-width: 800px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+body {
+  color: #32353C;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.7142857143;
+  letter-spacing: 0em;
+}
+@media (min-width: 800px) {
+  body {
+    line-height: 1.6875;
+  }
+}
 
 img {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*BLOCK
+-----------------------------------*/
+.unit__season {
+  margin-bottom: 2em;
+}
+.unit__title {
+  font-size: 2.2857142857rem;
+  line-height: 0.7619047619;
+}
+.unit__title span {
+  color: #B79B6C;
+}
+.unit__btn {
+  display: inline-block;
+  width: 185px;
+  color: #FFFFFF;
+  background-color: #32353C;
+  padding: 1.5em;
+  margin-top: 3em;
+  border-radius: 3px;
+  text-align: center;
 }
 
 /*------index------*/

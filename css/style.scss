@@ -34,12 +34,59 @@ $color-white: #FFFFFF;
 -----------------------------------*/
 html {
     font-size: (14/16)*100%;
+
+    @include mp-pc() {
+        font-size: (16/16)*100%;
+    }
+}
+
+body {
+    color: $color-main;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: (24/14);
+    letter-spacing: (0/1000)+em;
+
+    @include mp-pc() {
+        line-height: (27/16);
+    }
 }
 
 img {
     max-width: 100%;
     height: auto;
     vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*BLOCK
+-----------------------------------*/
+.unit {
+    &__season {
+        margin-bottom: (28/14)+em;
+    }
+
+    &__title {
+        font-size: rem(32);
+        line-height: (32/42);
+
+        span {
+            color: $color-accent;
+        }
+    }
+
+    &__btn {
+        display: inline-block;
+        width: 185px;
+        color: $color-white;
+        background-color: $color-main;
+        padding: (21/14)+em;
+        margin-top: (42/14)+em;
+        border-radius: 3px;
+        text-align: center;
+    }
 }
 
 /*------index------*/
