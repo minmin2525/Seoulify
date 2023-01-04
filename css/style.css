@@ -56,6 +56,42 @@ a {
   text-align: center;
 }
 
+.card__image {
+  position: relative;
+}
+.card__image::after {
+  content: "SALE";
+  width: 100px;
+  padding: 1em;
+  color: #FFFFFF;
+  background-color: #B79B6C;
+  border-radius: 3px;
+  text-align: center;
+  position: absolute;
+  top: 1.5em;
+  left: 1.5em;
+}
+.card__category {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+}
+.card__name {
+  margin-bottom: 0.4761904762em;
+  font-size: 1.5rem;
+  line-height: 0.7777777778;
+  font-weight: bold;
+}
+.card__price {
+  font-size: 1.5rem;
+  line-height: 0.7777777778;
+  font-weight: bold;
+  color: #B79B6C;
+}
+
+.bg-grey {
+  background-color: #F4F4F4;
+}
+
 /*------index------*/
 /*visual*/
 .visual {
@@ -76,5 +112,17 @@ a {
   width: 88.8888888889%;
   margin-left: auto;
   margin-right: auto;
+}
+.goods__introduction {
+  margin-bottom: 4em;
+}
+.goods__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.goods__item {
+  width: 46.25%;
 }
 /*# sourceMappingURL=style.css.map */
