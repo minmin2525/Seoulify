@@ -64,6 +64,7 @@ body {
 }
 
 img {
+    width: 100%;
     max-width: 100%;
     height: auto;
     vertical-align: bottom;
@@ -95,7 +96,7 @@ li {
 
     &__inner {
         @include inner();
-        @include flex($a: center, $j: space-between);
+        @include flex($a: center);
     }
 
     &__nav {
@@ -128,10 +129,19 @@ li {
     &__copy {
         margin-bottom: -1em;
 
+        @include mp-pc() {
+            @include flex();
+        }
+
         p {
             margin-bottom: 1em;
             text-align: center;
+
+            @include mp-pc() {
+                margin-bottom: 0;
+            }
         }
+
     }
 }
 
@@ -201,10 +211,6 @@ li {
     }
 }
 
-.bg-grey {
-    background-color: $color-back;
-}
-
 /*------index------*/
 /*visual*/
 .visual {
@@ -220,20 +226,42 @@ li {
 
 /*goods*/
 .goods {
+    article:nth-child(even) {
+        background-color: $color-back;
+
+        .goods__inner {
+            @include mp-pc() {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
     &__recommend {
         @include py();
     }
 
     &__inner {
         @include inner();
+
+        @include mp-pc() {
+            @include flex($a: center);
+        }
     }
 
     &__introduction {
         margin-bottom: (56/14)+em;
+
+        @include mp-pc() {
+            width: (360/1200)*100%;
+        }
     }
 
     &__list {
         @include flex();
+
+        @include mp-pc() {
+            width: (780/1200)*100%;
+        }
     }
 
     &__item {
@@ -241,6 +269,7 @@ li {
     }
 
 }
+
 
 /*share*/
 .share {
@@ -264,6 +293,10 @@ li {
     &__item {
         width: (370/800)*100%;
         margin-bottom: (56/14)+em;
+
+        @include mp-pc() {
+            width: (270/1200)*100%;
+        }
     }
 }
 
@@ -278,6 +311,10 @@ li {
 
     &__list {
         margin-bottom: -(56/16)+em;
+
+        @include mp-pc() {
+            @include flex();
+        }
     }
 
     &__item {
@@ -286,13 +323,24 @@ li {
         padding-left: (42/14)+em;
         padding-right: (42/14)+em;
         color: $color-white;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
 
     &__01 {
         background-image: url(../images/bg_post01.png);
+
+        @include mp-pc() {
+            width: (760/1200)*100%;
+        }
     }
 
     &__02 {
         background-color: $color-accent;
+
+        @include mp-pc() {
+            width: (380/1200)*100%;
+        }
     }
 }

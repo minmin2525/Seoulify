@@ -24,6 +24,7 @@ body {
 }
 
 img {
+  width: 100%;
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
@@ -94,9 +95,22 @@ li {
 .footer__copy {
   margin-bottom: -1em;
 }
+@media (min-width: 800px) {
+  .footer__copy {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+}
 .footer__copy p {
   margin-bottom: 1em;
   text-align: center;
+}
+@media (min-width: 800px) {
+  .footer__copy p {
+    margin-bottom: 0;
+  }
 }
 
 /*unit*/
@@ -154,10 +168,6 @@ li {
   color: #B79B6C;
 }
 
-.bg-grey {
-  background-color: #F4F4F4;
-}
-
 /*------index------*/
 /*visual*/
 .visual {
@@ -169,6 +179,14 @@ li {
 }
 
 /*goods*/
+.goods article:nth-child(even) {
+  background-color: #F4F4F4;
+}
+@media (min-width: 800px) {
+  .goods article:nth-child(even) .goods__inner {
+    flex-direction: row-reverse;
+  }
+}
 .goods__recommend {
   padding-top: 6em;
   padding-bottom: 6em;
@@ -179,14 +197,32 @@ li {
   margin-left: auto;
   margin-right: auto;
 }
+@media (min-width: 800px) {
+  .goods__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 .goods__introduction {
   margin-bottom: 4em;
+}
+@media (min-width: 800px) {
+  .goods__introduction {
+    width: 30%;
+  }
 }
 .goods__list {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: space-between;
+}
+@media (min-width: 800px) {
+  .goods__list {
+    width: 65%;
+  }
 }
 .goods__item {
   width: 46.25%;
@@ -220,6 +256,11 @@ li {
   width: 46.25%;
   margin-bottom: 4em;
 }
+@media (min-width: 800px) {
+  .share__item {
+    width: 22.5%;
+  }
+}
 
 /*topic*/
 .topic {
@@ -236,6 +277,14 @@ li {
 .topic__list {
   margin-bottom: -3.5em;
 }
+@media (min-width: 800px) {
+  .topic__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+}
 .topic__item {
   padding-top: 8em;
   padding-bottom: 8em;
@@ -243,11 +292,24 @@ li {
   padding-left: 3em;
   padding-right: 3em;
   color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .topic__01 {
   background-image: url(../images/bg_post01.png);
 }
+@media (min-width: 800px) {
+  .topic__01 {
+    width: 63.3333333333%;
+  }
+}
 .topic__02 {
   background-color: #B79B6C;
+}
+@media (min-width: 800px) {
+  .topic__02 {
+    width: 31.6666666667%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
