@@ -35,7 +35,7 @@ $color-white: #FFFFFF;
 
 @mixin title() {
     font-size: rem(32);
-    line-height: (32/42);
+    line-height: (42/32);
 }
 
 @function rem($value) {
@@ -75,6 +75,9 @@ a {
 
 /*BLOCK
 -----------------------------------*/
+/*footer*/
+
+/*unit*/
 .unit {
     &__season {
         margin-bottom: (28/14)+em;
@@ -100,6 +103,7 @@ a {
     }
 }
 
+/*card*/
 .card {
     &__image {
         position: relative;
@@ -202,5 +206,35 @@ a {
     &__item {
         width: (370/800)*100%;
         margin-bottom: (56/14)+em;
+    }
+}
+
+/*topic*/
+.topic {
+    @include py();
+    background-color: $color-back;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__list {
+        margin-bottom: -(56/16)+em;
+    }
+
+    &__item {
+        @include py(112);
+        margin-bottom: (56/16)+em;
+        padding-left: (42/14)+em;
+        padding-right: (42/14)+em;
+        color: $color-white;
+    }
+
+    &__01 {
+        background-image: url(../images/bg_post01.png);
+    }
+
+    &__02 {
+        background-color: $color-accent;
     }
 }

@@ -35,12 +35,13 @@ a {
 
 /*BLOCK
 -----------------------------------*/
+/*unit*/
 .unit__season {
   margin-bottom: 2em;
 }
 .unit__title {
   font-size: 2.2857142857rem;
-  line-height: 0.7619047619;
+  line-height: 1.3125;
 }
 .unit__title span {
   color: #B79B6C;
@@ -56,6 +57,7 @@ a {
   text-align: center;
 }
 
+/*card*/
 .card__image {
   position: relative;
 }
@@ -139,7 +141,7 @@ a {
 }
 .share__title {
   font-size: 2.2857142857rem;
-  line-height: 0.7619047619;
+  line-height: 1.3125;
   margin-bottom: 1.5em;
   text-align: center;
 }
@@ -153,5 +155,35 @@ a {
 .share__item {
   width: 46.25%;
   margin-bottom: 4em;
+}
+
+/*topic*/
+.topic {
+  padding-top: 6em;
+  padding-bottom: 6em;
+  background-color: #F4F4F4;
+}
+.topic__inner {
+  max-width: 800pxpx;
+  width: 88.8888888889%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.topic__list {
+  margin-bottom: -3.5em;
+}
+.topic__item {
+  padding-top: 8em;
+  padding-bottom: 8em;
+  margin-bottom: 3.5em;
+  padding-left: 3em;
+  padding-right: 3em;
+  color: #FFFFFF;
+}
+.topic__01 {
+  background-image: url(../images/bg_post01.png);
+}
+.topic__02 {
+  background-color: #B79B6C;
 }
 /*# sourceMappingURL=style.css.map */
