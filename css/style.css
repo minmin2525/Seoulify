@@ -33,9 +33,72 @@ a {
   text-decoration: none;
 }
 
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
 /*BLOCK
 -----------------------------------*/
+/*header*/
+.header {
+  width: 100%;
+  position: fixed;
+  padding: 32px 0;
+  background-color: #FFFFFF;
+  opacity: 0.8;
+  z-index: 999;
+}
+.header__inner {
+  max-width: 800pxpx;
+  width: 88.8888888889%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.header__nav ul li {
+  font-size: 1.1428571429rem;
+  margin-left: 2em;
+  font-weight: bold;
+}
+.header__nav ul li span {
+  color: #B79B6C;
+}
+
 /*footer*/
+.footer {
+  padding-top: 6em;
+  padding-bottom: 6em;
+  background-color: #32353C;
+  color: #FFFFFF;
+}
+.footer__inner {
+  max-width: 800pxpx;
+  width: 88.8888888889%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer__copy {
+  margin-bottom: -1em;
+}
+.footer__copy p {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
 /*unit*/
 .unit__season {
   margin-bottom: 2em;

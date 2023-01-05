@@ -73,9 +73,67 @@ a {
     text-decoration: none;
 }
 
+ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
 /*BLOCK
 -----------------------------------*/
+/*header*/
+.header {
+    width: 100%;
+    position: fixed;
+    padding: 32px 0;
+    background-color: $color-white;
+    opacity: 0.8;
+    z-index: 999;
+
+    &__inner {
+        @include inner();
+        @include flex($a: center, $j: space-between);
+    }
+
+    &__nav {
+        ul {
+            @include flex();
+
+            li {
+                font-size: rem(16);
+                margin-left: (32/16)+em;
+                font-weight: bold;
+
+                span {
+                    color: $color-accent;
+                }
+            }
+        }
+    }
+}
+
 /*footer*/
+.footer {
+    @include py();
+    background-color: $color-main;
+    color: $color-white;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__copy {
+        margin-bottom: -1em;
+
+        p {
+            margin-bottom: 1em;
+            text-align: center;
+        }
+    }
+}
 
 /*unit*/
 .unit {
