@@ -120,6 +120,7 @@ li {
 .unit__title {
   font-size: 2.2857142857rem;
   line-height: 1.3125;
+  margin-bottom: 1.3125em;
 }
 .unit__title span {
   color: #B79B6C;
@@ -130,7 +131,6 @@ li {
   color: #FFFFFF;
   background-color: #32353C;
   padding: 1.5em;
-  margin-top: 3em;
   border-radius: 3px;
   text-align: center;
 }
@@ -139,7 +139,7 @@ li {
 .card__image {
   position: relative;
 }
-.card__image::after {
+.card .label::after {
   content: "SALE";
   width: 100px;
   padding: 1em;
@@ -242,6 +242,7 @@ li {
 .share__title {
   font-size: 2.2857142857rem;
   line-height: 1.3125;
+  margin-bottom: 1.3125em;
   margin-bottom: 1.5em;
   text-align: center;
 }
@@ -311,5 +312,84 @@ li {
   .topic__02 {
     width: 31.6666666667%;
   }
+}
+
+/*------------about---------------------*/
+/*visual*/
+.about .visual {
+  background-image: url(../images/bg_about.png);
+}
+
+/*message*/
+.message {
+  padding-top: 6em;
+  padding-bottom: 6em;
+  text-align: center;
+}
+.message__inner {
+  max-width: 800pxpx;
+  width: 88.8888888889%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.message__title {
+  font-size: 2.2857142857rem;
+  line-height: 1.3125;
+  margin-bottom: 1.3125em;
+}
+.message__text {
+  font-size: 1.5rem;
+  line-height: 1.2857142857;
+  color: #B79B6C;
+}
+
+/*goods*/
+.about .goods {
+  background-color: #F4F4F4;
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+@media (min-width: 800px) {
+  .about .goods__inner {
+    display: block;
+  }
+}
+.about .goods__list {
+  margin-bottom: -4em;
+}
+@media (min-width: 800px) {
+  .about .goods__list {
+    width: 100%;
+  }
+}
+.about .goods__item {
+  margin-bottom: 4em;
+}
+@media (min-width: 800px) {
+  .about .goods__item {
+    width: 30%;
+  }
+}
+.about .goods__btnerea {
+  text-align: center;
+}
+.about .goods__btn {
+  margin-top: 4em;
+}
+
+/*topic*/
+.about .topic {
+  background-color: #FFFFFF;
+}
+@media (min-width: 800px) {
+  .about .topic__item {
+    width: 46.6666666667%;
+  }
+}
+.about .topic__03 {
+  background-image: url(../images/bg_post02.png);
+}
+.about .topic__04 {
+  background-image: url(../images/bg_post03.png);
 }
 /*# sourceMappingURL=style.css.map */

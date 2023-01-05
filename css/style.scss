@@ -36,6 +36,7 @@ $color-white: #FFFFFF;
 @mixin title() {
     font-size: rem(32);
     line-height: (42/32);
+    margin-bottom: (42/32)+em;
 }
 
 @function rem($value) {
@@ -165,7 +166,6 @@ li {
         color: $color-white;
         background-color: $color-main;
         padding: (21/14)+em;
-        margin-top: (42/14)+em;
         border-radius: 3px;
         text-align: center;
     }
@@ -177,7 +177,7 @@ li {
         position: relative;
     }
 
-    &__image::after {
+    .label::after {
         content: "SALE";
         width: 100px;
         padding: (14/14)+em;
@@ -342,5 +342,87 @@ li {
         @include mp-pc() {
             width: (380/1200)*100%;
         }
+    }
+}
+
+/*------------about---------------------*/
+/*visual*/
+.about .visual {
+    background-image: url(../images/bg_about.png);
+}
+
+/*message*/
+.message {
+    @include py();
+    text-align: center;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include title();
+    }
+
+    &__text {
+        font-size: rem(21);
+        line-height: (27/21);
+        color: $color-accent;
+    }
+}
+
+/*goods*/
+.about .goods {
+    background-color: $color-back;
+    @include py();
+
+    &__inner {
+        @include mp-pc() {
+            display: block;
+        }
+    }
+
+    &__list {
+        margin-bottom: -(56/14)+em;
+
+        @include mp-pc() {
+            width: 100%;
+        }
+    }
+
+    &__item {
+        margin-bottom: (56/14)+em;
+
+        @include mp-pc() {
+            width: (360/1200)*100%;
+        }
+    }
+
+    &__btnerea {
+        text-align: center;
+    }
+
+    &__btn {
+        margin-top: (56/14)+em;
+    }
+}
+
+/*topic*/
+.about .topic {
+    background-color: $color-white;
+
+    &__item {
+
+        @include mp-pc() {
+            width: (560/1200)*100%;
+        }
+    }
+
+    &__03 {
+        background-image: url(../images/bg_post02.png);
+    }
+
+    &__04 {
+        background-image: url(../images/bg_post03.png);
     }
 }
