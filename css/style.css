@@ -75,7 +75,7 @@ li {
   margin-left: 2em;
   font-weight: bold;
 }
-.header__nav ul li span {
+.header__nav ul li .active {
   color: #B79B6C;
 }
 

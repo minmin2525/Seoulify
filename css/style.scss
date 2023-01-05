@@ -108,7 +108,7 @@ li {
                 margin-left: (32/16)+em;
                 font-weight: bold;
 
-                span {
+                .active {
                     color: $color-accent;
                 }
             }
