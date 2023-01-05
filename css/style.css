@@ -125,4 +125,33 @@ a {
 .goods__item {
   width: 46.25%;
 }
+
+/*share*/
+.share {
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+.share__inner {
+  max-width: 800pxpx;
+  width: 88.8888888889%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.share__title {
+  font-size: 2.2857142857rem;
+  line-height: 0.7619047619;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+.share__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-bottom: -4em;
+}
+.share__item {
+  width: 46.25%;
+  margin-bottom: 4em;
+}
 /*# sourceMappingURL=style.css.map */

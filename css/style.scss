@@ -33,6 +33,11 @@ $color-white: #FFFFFF;
     justify-content: $j;
 }
 
+@mixin title() {
+    font-size: rem(32);
+    line-height: (32/42);
+}
+
 @function rem($value) {
     @return ($value/14)+rem;
 }
@@ -76,8 +81,7 @@ a {
     }
 
     &__title {
-        font-size: rem(32);
-        line-height: (32/42);
+        @include title();
 
         span {
             color: $color-accent;
@@ -174,4 +178,29 @@ a {
         width: (370/800)*100%;
     }
 
+}
+
+/*share*/
+.share {
+    @include py();
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include title();
+        margin-bottom: (48/32)+em;
+        text-align: center;
+    }
+
+    &__list {
+        @include flex();
+        margin-bottom: -(56/14)+em;
+    }
+
+    &__item {
+        width: (370/800)*100%;
+        margin-bottom: (56/14)+em;
+    }
 }
